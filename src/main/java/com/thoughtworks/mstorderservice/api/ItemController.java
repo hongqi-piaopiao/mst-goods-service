@@ -15,7 +15,7 @@ public class ItemController {
 
     @GetMapping(value = "/{itemId}")
     @ResponseStatus(HttpStatus.OK)
-    public Item list(@PathVariable("itemId") String itemId) {
+    public Item findItem(@PathVariable("itemId") String itemId) {
         return itemService.findItem(itemId);
     }
 }
