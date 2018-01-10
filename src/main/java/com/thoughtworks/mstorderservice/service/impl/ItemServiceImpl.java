@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ItemServieImpl implements ItemService {
+public class ItemServiceImpl implements ItemService {
 
     @Autowired
     ItemRepository itemRepository;
