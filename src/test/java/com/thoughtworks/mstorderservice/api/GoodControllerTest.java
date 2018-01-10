@@ -17,7 +17,7 @@ public class GoodControllerTest extends BaseControllerTest {
     private GoodRepository goodRepository;
 
     @Test
-    void should_return_item_when_give_item_id() throws Exception {
+    void should_return_good_when_give_good_id() throws Exception {
         String good1Id = "1";
         String good2Id = "2";
 
@@ -25,7 +25,7 @@ public class GoodControllerTest extends BaseControllerTest {
         Good item2 = Good.builder().id(good2Id).name("iPhone8 128G").price(7888.8).build();
         goodRepository.save(Arrays.asList(item, item2));
 
-        mockMvc.perform(get("/api/items/{itemId}", good1Id))
+        mockMvc.perform(get("/api/goods/{goodId}", good1Id))
                .andExpect(status().isOk())
                .andExpect(jsonPath("$.name").value("iPhone8 64G"))
                .andExpect(jsonPath("$.price").value(5888.8));
