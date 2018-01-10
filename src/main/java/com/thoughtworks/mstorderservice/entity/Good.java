@@ -12,8 +12,8 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "t_item")
-public class Item {
+@Table(name = "t_good")
+public class Good {
     @Id
     private String id;
 
