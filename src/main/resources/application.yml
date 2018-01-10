@@ -6,7 +6,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://${DB_HOST:127.0.0.1}:3306/${DB_NAME:mst_goods}
+    url: jdbc:mysql://${DB_HOST:127.0.0.1}:3306/${DB_NAME:mst_goods}?useSSL=false
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:dev}
     driver-class-name: com.mysql.jdbc.Driver

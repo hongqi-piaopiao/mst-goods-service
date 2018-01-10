@@ -2,22 +2,27 @@ package com.thoughtworks.mstorderservice.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.*;
+import java.math.BigDecimal;
 
-@Setter
-@Getter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-@Table(name = "t_good")
+@Table(name = "goods")
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Good {
     @Id
-    private String id;
+    @Column(name = "id")
+    @GeneratedValue
+    private Long id;
 
+    @Column(name = "name")
     private String name;
 
-    private double price;
+    @Column(name = "price")
+    private BigDecimal price;
 }
