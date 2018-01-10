@@ -22,7 +22,7 @@ public class QueryGoodsTest extends MstOrderServiceApplicationTests {
                        .build();
         Good qa = Good.builder()
                       .name("qa")
-                      .price(BigDecimal.valueOf(8.00))
+                      .price(BigDecimal.valueOf(20.00))
                       .build();
 
         goodsRepository.save(Arrays.asList(dev, qa));

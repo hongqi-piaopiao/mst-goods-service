@@ -3,9 +3,8 @@ package com.thoughtworks.mstorderservice.apis;
 import com.thoughtworks.mstorderservice.DTO.GoodDTO;
 import com.thoughtworks.mstorderservice.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +22,11 @@ public class GoodsController {
     @GetMapping
     public List<GoodDTO> getList() {
         return goodsService.getAll();
+    }
+
+    @GetMapping(value = "/{goodId}")
+    @ResponseStatus(HttpStatus.OK)
+    public GoodDTO findGood(@PathVariable("goodId") Long goodId) {
+        return goodsService.findGood(goodId);
     }
 }

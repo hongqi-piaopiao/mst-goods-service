@@ -11,4 +11,6 @@ public interface GoodsRepository extends JpaRepository<Good, Long> {
 
     List<Good> findAll();
 
+    Good findOneById(Long id);
+
 }
