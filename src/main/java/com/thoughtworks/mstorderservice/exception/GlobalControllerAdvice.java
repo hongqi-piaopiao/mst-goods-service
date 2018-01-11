@@ -24,5 +24,11 @@ public class GlobalControllerAdvice {
     public void handleBadCredentialsException(BadCredentialsException exception) {
         log.error(exception.getMessage());
     }
+
+    @ExceptionHandler(value = {MstException.class})
+    public ResponseEntity handleCustomizedRuntimeException(MstException e) throws Exception {
+        return ResponseEntity.status(e.getHttpStatus())
+                             .body(new ErrorResult(e.getCode(), e.getMessage()));
+    }
 }
 

@@ -30,8 +30,8 @@ public class GoodsController {
         return goodsService.findGood(goodId);
     }
 
-    @PostMapping(value = "/{name}/order/{orderId}")
-    public GoodDTO order(@PathVariable("name") String name, @PathVariable("orderId") Long orderId) {
-        return goodsService.order(name, orderId);
+    @PostMapping(value = "/{goodId}/order/{orderId}")
+    public GoodDTO order(@PathVariable("goodId") Long goodId, @PathVariable("orderId") Long orderId) {
+        return goodsService.order(goodId, orderId);
     }
 }

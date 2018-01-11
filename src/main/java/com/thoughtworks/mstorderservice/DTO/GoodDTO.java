@@ -11,4 +11,5 @@ public class GoodDTO {
     private Long id;
     private String name;
     private BigDecimal price;
+    private Long orderId;
 }

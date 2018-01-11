@@ -11,7 +11,7 @@ public interface GoodsRepository extends JpaRepository<Good, Long> {
 
     List<Good> findAll();
 
-    Good findOneById(Long id);
+    List<Good> findAllByOrderIdIsNull();
 
-    Good findOneByNameAndOrderIdIsNull(String name);
+    Good findOneById(Long id);
 }
