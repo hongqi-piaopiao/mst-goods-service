@@ -25,4 +25,7 @@ public class Good {
 
     @Column(name = "price")
     private BigDecimal price;
+
+    @Column(name = "order_id")
+    private Long orderId;
 }

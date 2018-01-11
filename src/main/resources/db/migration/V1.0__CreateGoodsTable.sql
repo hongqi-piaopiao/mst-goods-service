@@ -1,5 +1,0 @@
-CREATE TABLE goods (
-  `id`    BIGINT        NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `name`  VARCHAR(500)  NOT NULL,
-  `price` DECIMAL(9, 2) NOT NULL             DEFAULT 0
-);

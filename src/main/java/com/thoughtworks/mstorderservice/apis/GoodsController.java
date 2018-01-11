@@ -29,4 +29,9 @@ public class GoodsController {
     public GoodDTO findGood(@PathVariable("goodId") Long goodId) {
         return goodsService.findGood(goodId);
     }
+
+    @PostMapping(value = "/{name}/order/{orderId}")
+    public GoodDTO order(@PathVariable("name") String name, @PathVariable("orderId") Long orderId) {
+        return goodsService.order(name, orderId);
+    }
 }

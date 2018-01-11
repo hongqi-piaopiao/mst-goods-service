@@ -36,4 +36,11 @@ public class GoodsService {
                       .price(good.getPrice())
                       .build();
     }
+
+    public GoodDTO order(String name, Long orderId) {
+        Good good = goodsRepository.findOneByNameAndOrderIdIsNull(name);
+        good.setOrderId(orderId);
+        goodsRepository.saveAndFlush(good);
+        return this.mapToDTO(good);
+    }
 }

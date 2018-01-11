@@ -2,5 +2,5 @@ spring:
   datasource:
     url: jdbc:mysql://${DB_HOST:127.0.0.1}:3306/${DB_NAME:mst_goods_test}?useSSL=false
     username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:dev}
+    password: ${DB_PASSWORD:123qwe}
     driver-class-name: com.mysql.jdbc.Driver

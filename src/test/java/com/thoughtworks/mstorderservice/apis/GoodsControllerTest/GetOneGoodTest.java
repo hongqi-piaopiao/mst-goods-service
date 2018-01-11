@@ -2,10 +2,8 @@ package com.thoughtworks.mstorderservice.apis.GoodsControllerTest;
 
 
 import com.thoughtworks.mstorderservice.MstOrderServiceApplicationTests;
-import com.thoughtworks.mstorderservice.Repository.GoodsRepository;
 import com.thoughtworks.mstorderservice.entity.Good;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
 
@@ -14,13 +12,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 public class GetOneGoodTest extends MstOrderServiceApplicationTests {
-
-    private GoodsRepository goodsRepository;
-
-    @Autowired
-    public GetOneGoodTest(GoodsRepository goodsRepository) {
-        this.goodsRepository = goodsRepository;
-    }
 
     @Test
     void should_return_good_when_give_good_id() throws Exception {
